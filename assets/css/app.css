@@ -1,0 +1,9 @@
+@font-face {
+    font-family: poppins;
+    src: url("../fonts/Poppins-Medium.ttf");
+}
+
+body{
+    font-family: poppins, 'Times New Roman', Times, serif;
+    scroll-behavior: smooth;
+}

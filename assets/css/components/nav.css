@@ -1,0 +1,142 @@
+
+.container-navigation{
+    background-color: black;
+}
+.container-navigation .navigation-page{
+    display: grid;
+    padding: 1.5rem;
+    gap: .5rem;
+    grid-template-columns: auto 1fr auto;
+    position: relative;
+}
+.container-navigation ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.container-navigation ul li a{
+    display: inherit;
+    color: rgb(214, 214, 214);
+    text-decoration: none;
+}
+/* btn-menu */
+.container-navigation .btn-menu{
+    border: none;
+    background-color: transparent;
+    color: rgb(214, 214, 214);
+    font-size: 1.5rem;
+}
+/* menu navegacion */
+
+.container-navigation .logo-button li a{
+    font-size: 2rem;
+}
+
+.container-navigation .nav-buttons{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background-color: lightgray;
+    height: calc(100vh - 80px);
+}
+    .container-navigation .nav-buttons li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 60px;
+    }
+    .container-navigation .nav-buttons li a{
+        display: inherit;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        color: black
+    }
+    .container-navigation .nav-buttons li .router-link-active{
+        background-color: red;
+    }
+
+
+
+
+@media screen and (min-width:1080px) {
+    
+.container-navigation{
+    width: 100%;
+    background-color: black;
+}
+.navigation-page{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    width: 80%;
+    padding: 1.4rem 0;
+    margin: auto;
+    gap: .5rem;
+}
+.navigation-page ul{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    font-size: 1.6rem;
+}
+.navigation-page ul li{
+    display: flex;
+    height: inherit;
+}
+.navigation-page ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(214, 214, 214);
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+/* logo */
+
+.btn-menu{
+    display: none;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    color: rgb(214, 214, 214);
+    font-size: 1.5rem;
+}
+
+.navigation-page ul li a h2{
+    font-weight: 700;
+}
+
+/* buttons nav page */
+.navigation-page .nav-buttons{
+    max-width: 500px;
+    font-size: .8rem;
+    text-transform: uppercase;
+    margin: auto;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+.navigation-page .nav-buttons li{
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+
+/* chart button */
+
+.navigation-page .chart-button li a{
+    font-size: .9rem;
+}
+}
