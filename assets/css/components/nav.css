@@ -1,8 +1,13 @@
 
 .container-navigation{
+    height: 80px;
+    width: 100vw;
     background-color: black;
 }
 .container-navigation .navigation-page{
+    position: fixed;
+    top: 0;
+    right: 0;
     display: grid;
     padding: 1.5rem;
     gap: .5rem;
@@ -27,6 +32,7 @@
     background-color: transparent;
     color: rgb(214, 214, 214);
     font-size: 1.5rem;
+    cursor: pointer;
 }
 /* menu navegacion */
 
@@ -43,6 +49,7 @@
     width: 100%;
     background-color: lightgray;
     height: calc(100vh - 80px);
+    overflow: hidden;
 }
     .container-navigation .nav-buttons li{
         display: flex;
@@ -60,10 +67,19 @@
         color: black
     }
     .container-navigation .nav-buttons li .router-link-active{
-        background-color: red;
+        background-color: gray;
     }
 
-
+    .v-enter-active,
+    .v-leave-active {
+      transition: all .3s ease;;
+    }
+    
+    .v-enter-from,
+    .v-leave-to {
+      opacity: 0;
+      transform: translateX(20px);
+    }
 
 
 @media screen and (min-width:1080px) {
