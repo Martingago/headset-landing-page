@@ -1,7 +1,7 @@
 <template>
     <div class="container-navigation">
         <nav class="navigation-page">
-            <button class="btn-menu" @click="mostrar = !mostrar">
+            <button class="btn-menu" @click="toggleMenu = !toggleMenu">
                         <font-awesome-icon icon="fa-solid fa-bars" />
             </button>
             <ul class="logo-button">
@@ -10,18 +10,18 @@
                 </li>
             </ul>
             <Transition>
-                <ul class="nav-buttons" v-if="mostrar">
+                <ul class="nav-buttons" v-bind:class="{hiddenMenu: toggleMenu}">
                     <li>
-                        <NuxtLink to="/about">Inicio</NuxtLink>
+                        <NuxtLink @click="cerrarMenu" to="/about">Inicio</NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="/">Auriculares</NuxtLink>
+                        <NuxtLink @click="cerrarMenu" to="/">Auriculares</NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="/">Altavoces</NuxtLink>
+                        <NuxtLink @click="cerrarMenu" to="/">Altavoces</NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="/">In-Ear</NuxtLink>
+                        <NuxtLink @click="cerrarMenu" to="/">In-Ear</NuxtLink>
                     </li>
                 </ul>
             </Transition>
@@ -35,7 +35,17 @@
 </template>
 <script setup>
 import "@/assets/css/components/nav.css";
-import { ref } from "vue";
+import { ref} from "vue";
 
-const mostrar = ref(false)
+const toggleMenu = ref(false)
+
+
+
+const cerrarMenu = () => {
+    if(document.documentElement.scrollWidth < 1080){
+        mostrar.value = !mostrar
+    }
+}
+
+
 </script>

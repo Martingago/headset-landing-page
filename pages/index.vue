@@ -1,3 +1,8 @@
 <template>
-  <h1>Index page</h1>
+  <headsetVue></headsetVue>
 </template>
+
+<script setup>
+
+  import headsetVue from '@/components/product/headset.vue';
+</script>
