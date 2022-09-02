@@ -1,0 +1,68 @@
+.speaker-section-product{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto;
+    background-color: rgb(230, 150, 75);
+    width: 90%;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 3rem;
+    border-radius: 5px;
+    justify-content: center;
+    align-content: center;
+}
+.speaker-section-product .item-article{
+    min-width: 400px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.speaker-section-product button{
+    background-color: black;
+}
+
+.speaker-img{
+    max-width: 500px;
+    margin: auto;
+    transform: translateY(60px);
+}
+
+@media screen and (max-width:1080px) {
+    .speaker-section-product{
+        width: 80%;
+        padding: 2rem 0;
+    }
+    .speaker-section-product{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto);
+    }
+    .speaker-section-product .item-article{
+        grid-column: 1 / 1;
+        grid-row: 2 / 3;
+        width: 100%;
+        max-width: 450px;
+    }
+    .speaker-section-product .item-article h2{
+        font-size: clamp(2rem, 10vw, 3.5rem);
+    }
+    .speaker-section-product .item-article p{
+        font-size: clamp(.8rem, 5vh, 1rem);
+    }
+
+    .speaker-img{
+        width: 90%;
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .speaker-section-product{
+        width: 95%;
+    }
+    .speaker-section-product .item-article{
+        min-width: auto;
+    }
+    .speaker-img{
+        width: 80%;
+    }
+}

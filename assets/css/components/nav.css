@@ -1,7 +1,7 @@
 
 .container-navigation{
     height: 80px;
-    width: 100vw;
+    width: 100%;
     background-color: black;
 }
 .container-navigation .navigation-page{
@@ -9,10 +9,12 @@
     top: 0;
     right: 0;
     display: grid;
+    width: 100%;
     padding: 1.5rem;
     gap: .5rem;
     grid-template-columns: auto 1fr auto;
-    position: relative;
+    z-index: 999;
+    background-color: black;
 }
 .container-navigation ul li{
     display: flex;
@@ -41,10 +43,10 @@
 }
 
 .container-navigation .nav-buttons{
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
-    top: 100%;
+    top: 80px;
     right: 0;
     width: 100%;
     background-color: lightgray;
@@ -93,7 +95,7 @@
 @media screen and (min-width:1080px) {
     .container-navigation .navigation-page{
         grid-template-columns: auto 1fr auto;
-        max-width: 80%;
+        max-width: 100%;
         margin: auto;
     }
     .btn-menu{

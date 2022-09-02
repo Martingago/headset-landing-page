@@ -1,4 +1,4 @@
-.headset-product-section {
+.item-product-section {
     display: grid;
     grid-template-columns: auto auto;
     justify-content: center;
@@ -6,42 +6,42 @@
     width: 100%;
     margin: auto;
     padding: 1rem;
-    background: rgb(10,10,11);
-background: linear-gradient(126deg, rgba(10,10,11,1) 0%, rgba(41,43,43,1) 96%);
+    background: rgb(10, 10, 11);
+    background: linear-gradient(126deg, rgba(10, 10, 11, 1) 0%, rgba(41, 43, 43, 1) 96%);
 }
 
 /* headset article */
 
-.headset-article {
+.item-article {
     align-self: center;
     display: flex;
     flex-direction: column;
     width: 100%;
     height: fit-content;
-    max-width: 500px;
+    max-width: 450px;
     padding: 1rem;
     color: white
 }
 
-.headset-article h3 {
+.item-article h3 {
     text-transform: uppercase;
     font-size: 1rem;
     letter-spacing: 4px;
 }
 
-.headset-article h2 {
+.item-article h2 {
     margin: 1.5rem 0;
     text-transform: uppercase;
     font-size: 2.9rem;
     font-weight: 900;
 }
 
-.headset-article p {
+.item-article p {
     font-size: .9rem;
     line-height: 1.2rem;
 }
 
-.headset-article button {
+.item-article button {
     width: 170px;
     height: 50px;
     padding: 1rem 2rem;
@@ -56,44 +56,60 @@ background: linear-gradient(126deg, rgba(10,10,11,1) 0%, rgba(41,43,43,1) 96%);
     cursor: pointer;
     transition: font-size .2s linear;
 }
-.headset-article button:hover{
+
+.item-article button:hover {
     font-size: .75rem;
 }
 
 
-.headset-img {
+.item-img {
     width: 400px;
 }
 
 @media screen and (max-width:1080px) {
-    .headset-product-section{
+    .item-product-section {
         grid-template-columns: 1fr;
         position: relative;
         overflow: hidden;
+        height: calc(100vh - 80px);
     }
-    .headset-article{
+
+    .item-article {
         margin: auto;
         z-index: 1;
         justify-content: center;
         align-items: center;
         padding: 1rem;
     }
-    .headset-article h3{
+
+    .item-article h3 {
         font-size: clamp(1rem, 5vw, 1.5rem);
     }
-    .headset-article h2{
+
+    .item-article h2 {
         font-size: clamp(2rem, 10vw, 3.5rem);
     }
-    .headset-article p{
+
+    .item-article p {
         max-width: 368px;
     }
 
-    .headset-img{
-        top: 0;
+    .item-img {
+        top: 50%;
         right: 50%;
-        transform: translateX(50%);
+        transform: translate(50%, -50%);
         position: absolute;
         z-index: 0;
-        width: 90%;
+        width: 70%;
+        max-width: 700px;
+        min-width: 360px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .item-product-section {
+        height: auto;
+        min-height: 450px;
+
     }
 }

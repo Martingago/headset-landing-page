@@ -1,0 +1,82 @@
+.carrousel-product-component{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-content: center;
+    width: 90%;
+    max-width: 1200px;
+    height: 400px;
+    margin: auto;
+    gap: 2rem;
+}
+
+.carrousel-product-component article{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px;
+    justify-content: flex-end;
+    align-items: center;
+    height: 200px;
+    padding: 2rem;
+    background: rgb(244,244,245);
+background: linear-gradient(49deg, rgb(255, 253, 253) 0%, rgb(255, 253, 253)100%);
+}
+
+.carrousel-product-component article img{
+    position: absolute;
+    width: 40%;
+    transform: translateY(-70px);
+    transition: transform .2s linear;
+}
+
+.carrousel-product-component article h2{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin: 1rem;
+}
+.carrousel-product-component article button{
+    border: none;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: .9rem;
+    color: darkgrey;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+    .carrousel-product-component article button svg{
+        color: rgb(230, 150, 75);
+        font-weight: 900;
+        
+    }
+
+.carrousel-product-component article button:hover{
+    transform: translateX(5px);
+    color: rgb(230, 150, 75);
+}
+
+.carrousel-product-component article img:hover{
+    transform: translateY(-80px);
+}
+
+@media screen and (max-width:1080px) {
+    .carrousel-product-component{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        height: auto;
+        width: 80%;
+        gap: 4rem;
+    }
+    .carrousel-product-component article{
+        width: 100%;
+        margin: auto;
+    }
+    .carrousel-product-component article img{
+        max-width: 150px;
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .carrousel-product-component{
+        width: 95%;
+    }
+}
