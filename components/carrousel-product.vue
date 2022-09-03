@@ -13,7 +13,7 @@
         <article>
             <img src="@/assets/img/product/auriculares-inalambricos-xiaomi-buds-3t-pro-bluetooth-.jpg">
             <h2>Headphones</h2>
-            <button>Earphones <font-awesome-icon icon="fa-solid fa-chevron-right" /></button>
+            <button>Shop <font-awesome-icon icon="fa-solid fa-chevron-right" /></button>
         </article>
 
     </section>
