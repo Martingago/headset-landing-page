@@ -1,19 +1,18 @@
 
 .container-navigation{
+    position: sticky;
+    top: 0;
     height: 80px;
     width: 100%;
     background-color: black;
+    z-index: 999;
 }
 .container-navigation .navigation-page{
-    position: fixed;
-    top: 0;
-    right: 0;
     display: grid;
     width: 100%;
     padding: 1.5rem;
     gap: .5rem;
     grid-template-columns: auto 1fr auto;
-    z-index: 999;
     background-color: black;
 }
 .container-navigation ul li{
@@ -95,7 +94,8 @@
 @media screen and (min-width:1080px) {
     .container-navigation .navigation-page{
         grid-template-columns: auto 1fr auto;
-        max-width: 100%;
+        width: 80%;
+        padding: 1.5rem 0;
         margin: auto;
     }
     .btn-menu{
