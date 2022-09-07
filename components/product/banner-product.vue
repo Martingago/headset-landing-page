@@ -1,5 +1,5 @@
 <template>
-<section class="banner-speaker-product">
+<section class="banner-speaker-product" id="speaker">
     <article class="speaker-product">
         <h2>ZX7 speaker</h2>
         <button> <font-awesome-icon icon="fa-solid fa-chevron-right" /> Ver producto</button>

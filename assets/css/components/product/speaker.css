@@ -5,7 +5,7 @@
     background-color: rgb(230, 150, 75);
     width: 90%;
     max-width: 1200px;
-    margin: 4rem auto;
+    margin:auto;
     padding: 3rem;
     border-radius: 5px;
     justify-content: center;
@@ -58,6 +58,7 @@
 @media screen and (max-width: 768px) {
     .speaker-section-product{
         width: 95%;
+        margin:auto;
     }
     .speaker-section-product .item-article{
         min-width: auto;

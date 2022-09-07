@@ -18,7 +18,7 @@
                         <NuxtLink @click="cerrarMenu" to="/">Auriculares</NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink @click="cerrarMenu" to="/">Altavoces</NuxtLink>
+                        <NuxtLink :to="{path: '/', hash: '#speaker'}">Altavoces</NuxtLink>
                     </li>
                     <li>
                         <NuxtLink @click="cerrarMenu" to="/">In-Ear</NuxtLink>
@@ -37,7 +37,7 @@
 import "@/assets/css/components/nav.css";
 import { ref} from "vue";
 
-const toggleMenu = ref(false)
+const toggleMenu = ref(true)
 
 
 
@@ -46,6 +46,7 @@ const cerrarMenu = () => {
         mostrar.value = !mostrar
     }
 }
+
 
 
 </script>
